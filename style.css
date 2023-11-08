@@ -10,6 +10,8 @@ body {
     background-color: #222;
 }
 
+/* header styling */
+
 body header {
     background-color: #3ddf7e;
     background-image: url('/img/ninjahead.svg');
@@ -36,9 +38,78 @@ h1 {
     font-size: 5rem;
 }
 
+/* main block styling */
+
 body main {
     max-width: 1000px;
     margin: 2rem auto;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
+    gap: 2rem;
+}
+
+body main article {
+    grid-column: auto / span 2;
+    color: white;
+}
+
+body main article.large {
+    grid-column: auto / span 3;
+    color: #222;
+    background-color: white;
+}
+
+body main article img {
+    width: 100%;
+}
+
+body main article h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+body main article button {
+    appearance: none;
+    padding: .5rem 1rem;
+    border: none;
+    border-radius: .25rem;
+    background-color: #e73f57;
+    color: white;
+    margin-top: 2rem;
+}
+
+body main article.large h2, body main article.large p {
+    margin: 1rem;
+}
+
+body main article.large button {
+    margin: 1rem;
+    padding: 1rem 2rem;
+}
+
+/* footer styling */
+
+body footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+    color: white;
+}
+
+body footer section {
+    max-width: 1000px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+body footer section article h2 {
+    margin-bottom: 1rem;
+}
+
+body footer section article p {
+    line-height: 150%;
 }
